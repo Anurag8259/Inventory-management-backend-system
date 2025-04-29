@@ -25,6 +25,11 @@ public class OrdersController {
         this.ordersService = ordersService;
     }
 
+    @GetMapping("/helloOrders")
+    public String helloOrders(){
+        return "Hello from Orders Service";
+    }
+
     @GetMapping
     public ResponseEntity<List<OrderRequestDto>> getAllOrders(HttpServletRequest httpServletRequest){
         log.info("Fetching all orders via controller");
